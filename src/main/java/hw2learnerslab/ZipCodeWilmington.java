@@ -30,20 +30,20 @@ public class ZipCodeWilmington {
 
 
     public void hostLecture(Teacher teacher, double numberOfHours){
-        teacher.lecture(students.getStudents(), 25.0);
+        teacher.lecture(students.studentsArray, numberOfHours);
     }
 
     public void hostLecture(long id, double numberOfHours){
-        for (Instructor x : instructors.getInstructors()){
+        for (Instructor x : instructors.instructorsArray){
             if (x.getID() == id){
-                x.lecture(students.getStudents(), 35.5);
+                x.lecture(students.studentsArray, numberOfHours);
             }
         }
     }
 
     public Map<Student, Double> getStudyMap(){
         Map<Student, Double> studyMap = new HashMap<>();
-        for(Student x : students.getStudents()){
+        for(Student x : students.studentsArray){
             studyMap.put(x, x.getTotalStudyTime());
         }
         return studyMap;

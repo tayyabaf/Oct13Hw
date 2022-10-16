@@ -14,7 +14,7 @@ class StudentsTest {
         Students students = Students.getInstance();
         //when
         //then
-        for (Student x : students.getStudents()){
+        for (Student x : students.studentsArray){
             assertTrue(x.getID() == 23l || x.getID() ==45l || x.getID() ==39l);
         }
     }

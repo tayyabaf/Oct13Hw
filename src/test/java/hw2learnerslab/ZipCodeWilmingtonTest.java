@@ -9,15 +9,27 @@ class ZipCodeWilmingtonTest {
     void testHostLectureWithTeacherParameter(){
         //given
         ZipCodeWilmington cohort = ZipCodeWilmington.getInstance();
-        Instructor instructor = new Instructor(23L, "Peter");
+        Instructor instructor = cohort.getInstructors().instructorsArray[0];
         //when
         cohort.hostLecture(instructor, 30.0);
         //then
-        for (Student x : cohort.getStudents().getStudents()){
-            assertTrue(x.getTotalStudyTime() == 30.0 || x.getTotalStudyTime() ==25.5 || x.getTotalStudyTime() ==19.5);
+        for (Student x : cohort.getStudents().studentsArray){
+            assertTrue(x.getTotalStudyTime() == 30.00 || x.getTotalStudyTime() == 25.5 || x.getTotalStudyTime() == 19.5);
         }
     }
 
-//finish over weekend
+    @Test
+    void testHostLectureWithIDParamter(){
+        //given
+        ZipCodeWilmington cohort = ZipCodeWilmington.getInstance();
+        //when
+        cohort.hostLecture(65L, 30.0);
+        //then
+        for (Student x : cohort.getStudents().studentsArray){
+            assertTrue(x.getTotalStudyTime() == 30.00 || x.getTotalStudyTime() == 25.5 || x.getTotalStudyTime() == 19.5);
+        }
+    }
+
+
 
 }

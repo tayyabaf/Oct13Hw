@@ -11,7 +11,7 @@ class InstructorsTest {
         Instructors instructors = Instructors.getInstance();
         //when
         //then
-        for (Instructor x : instructors.getInstructors()){
+        for (Instructor x : instructors.instructorsArray){
             assertTrue(x.getID()==99L || x.getID() ==65L);
         }
     }

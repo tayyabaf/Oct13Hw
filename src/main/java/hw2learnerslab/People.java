@@ -6,24 +6,6 @@ import java.util.List;
 
 public class People {
     private List<Person> personList = new ArrayList<>();
-    private Student[] studentsArray;
-    private Instructor [] instructors;
-
-    public Student[] getStudents() {
-        return studentsArray;
-    }
-
-    public void setStudents(Student[] studentsArray) {
-        this.studentsArray = studentsArray;
-    }
-
-    public Instructor[] getInstructors() {
-        return instructors;
-    }
-
-    public void setInstructors(Instructor[] instructors) {
-        this.instructors = instructors;
-    }
 
     public List<Person> getPersonList() {
         return personList;
